@@ -7,21 +7,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.time.LocalDateTime;
-
-@Table("lessons")
+@Table("files")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class lesson {
+public class File {
     @Id
     private Integer id;
     @Column
-    private String content;
+    private String name;
     @Column
-    private Integer group_id;
-    @Column
-    private LocalDateTime date;
-    @Column
-    private LocalDateTime deadline;
+    private String link;
 }
