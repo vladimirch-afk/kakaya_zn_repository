@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface LessonRepository extends CrudRepository<Lesson, Integer> {
     List<Lesson> findLessonsByDate(LocalDateTime date);
+
     List<Lesson> findLessonsByDeadline(LocalDateTime deadline);
+
     List<Lesson> findLessonsByGroupId(Integer group_id);
 }

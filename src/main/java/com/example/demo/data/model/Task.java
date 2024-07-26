@@ -1,4 +1,5 @@
 package com.example.demo.data.model;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Task
-{
+public class Task {
     @Id
     private Integer id;
     @Column
