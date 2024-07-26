@@ -7,13 +7,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.List;
-
-@Table("students")
+@Table("teachers")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Student {
+public class Teacher {
     @Id
     private Integer id;
     @Column
@@ -27,5 +25,5 @@ public class Student {
     @Column
     private String password;
     @Column
-    private List<Integer> group_list;
+    private String subject;
 }

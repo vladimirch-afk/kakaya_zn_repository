@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface TaskRepository extends CrudRepository<Task, Integer> {
     List<Task> findBySubjectAndTestType(String subject, Boolean testType);
+
     List<Task> findBySubject(String subject);
+
     List<Task> findByTestType(Boolean testType);
 }

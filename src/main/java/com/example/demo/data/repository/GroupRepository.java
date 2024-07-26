@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface GroupRepository extends CrudRepository<Group, Integer> {
     List<Group> findAllByCourseId(int course_id);
+
     List<Group> findAllByName(String name);
 }

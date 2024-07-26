@@ -11,5 +11,9 @@ public interface AssessmentRepository extends CrudRepository<Assessment, Integer
 
     @Query("SELECT a.* FROM assessments a JOIN students s ON a.student_id = s.id " +
             "WHERE CONCAT(s.name, ' ', s.surname, ' ', s.patronymic) ~ :regexPattern")
-    List<Assessment> findAssessmentsByStudent(String regexPattern);
+    List<Assessment> findAssessmentsByStudentRegex(String regexPattern);
+
+    List<Assessment> findAssessmentsByStudentId(Integer student_id);
+
+    List<Assessment> findAssessmentsByLessonId(Integer lesson_id);
 }
