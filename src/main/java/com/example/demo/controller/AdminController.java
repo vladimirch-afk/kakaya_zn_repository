@@ -144,6 +144,13 @@ public class AdminController implements AdminApi {
     }
 
     @Override
+    @GetMapping("/admin/info/all-files")
+    public String getAllFiles() {
+        //TODO()
+        return "";
+    }
+
+    @Override
     @GetMapping("/admin/info/student")
     public String getStudent(
             @RequestParam String email

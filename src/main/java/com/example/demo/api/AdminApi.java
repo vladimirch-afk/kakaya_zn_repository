@@ -55,6 +55,8 @@ public interface AdminApi {
 
     String getAllGroups(String email);
 
+    public String getAllFiles();
+
     String getStudent(String email);
 
     String getTeacher(String email);
