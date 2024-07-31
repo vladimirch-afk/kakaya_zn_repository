@@ -24,15 +24,17 @@ public class FileController implements FilesApi {
     private String uploadDir;
     @Override
     @PostMapping("/files/upload")
-    public void uploadFile(
+    public ResponseEntity<String> uploadFile(
             @RequestParam MultipartFile file
     ) {
         try {
             byte[] bytes = file.getBytes();
             Path path = Paths.get(uploadDir + File.separator + file.getOriginalFilename());
             Files.write(path, bytes);
+            return ResponseEntity.ok().body(null);
         } catch (Exception e) {
             e.printStackTrace();
+            return ResponseEntity.status(404).body(null);
         }
     }
 

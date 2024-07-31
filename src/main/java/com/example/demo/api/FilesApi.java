@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface FilesApi {
 
-    public void uploadFile(MultipartFile file);
+    public ResponseEntity<String> uploadFile(MultipartFile file);
 
     public ResponseEntity<Resource> downloadFile(String filename);
 }
