@@ -7,21 +7,19 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("materials")
+@Table("videos")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Material {
+public class Video {
     @Id
     private Integer id;
     @Column
-    private String content;
+    private String URL;
+    @Column
+    private String title;
     @Column
     private String topic;
-    @Column
-    private String file_name;
-    @Column
-    private String file_path;
     @Column
     private String course;
 }
