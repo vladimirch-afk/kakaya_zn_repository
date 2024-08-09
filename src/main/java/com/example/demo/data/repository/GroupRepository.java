@@ -1,6 +1,6 @@
 package com.example.demo.data.repository;
 
-import com.example.demo.data.model.Group;
+import com.example.demo.data.model.entities.Group;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

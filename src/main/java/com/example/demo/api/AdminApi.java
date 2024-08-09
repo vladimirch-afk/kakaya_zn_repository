@@ -1,7 +1,5 @@
 package com.example.demo.api;
 
-import com.example.demo.data.model.Course;
-
 import java.util.List;
 
 public interface AdminApi {

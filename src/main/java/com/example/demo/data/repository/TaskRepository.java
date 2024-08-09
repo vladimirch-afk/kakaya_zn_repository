@@ -1,6 +1,6 @@
 package com.example.demo.data.repository;
 
-import com.example.demo.data.model.Task;
+import com.example.demo.data.model.entities.Task;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

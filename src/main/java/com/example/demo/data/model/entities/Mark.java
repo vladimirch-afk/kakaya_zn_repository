@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,15 +7,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("groups")
+
+@Table("marks")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Group {
+public class Mark {
     @Id
     private Integer id;
     @Column
-    private String name;
+    private Integer mark;
     @Column
-    private Integer course_id;
+    private Integer student_id;
+    @Column
+    private Integer assessment_id;
 }

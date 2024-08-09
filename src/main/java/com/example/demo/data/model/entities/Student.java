@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,18 +7,25 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.util.List;
 
-@Table("tasks")
+@Table("students")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Task {
+public class Student {
     @Id
     private Integer id;
     @Column
-    private String content;
+    private String name;
     @Column
-    private String subject;
+    private String surname;
     @Column
-    private Boolean test_type;
+    private String patronymic;
+    @Column
+    private String email;
+    @Column
+    private String password;
+    @Column
+    private List<Integer> group_list;
 }

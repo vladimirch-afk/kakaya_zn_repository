@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,18 +7,21 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.time.LocalDateTime;
 
-@Table("marks")
+@Table("lessons")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Mark {
+public class Lesson {
     @Id
     private Integer id;
     @Column
-    private Integer mark;
+    private String content;
     @Column
-    private Integer student_id;
+    private Integer group_id;
     @Column
-    private Integer assessment_id;
+    private LocalDateTime date;
+    @Column
+    private LocalDateTime deadline;
 }

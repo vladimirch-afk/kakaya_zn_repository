@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,15 +7,23 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("files")
+@Table("teachers")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class File {
+public class Teacher {
     @Id
     private Integer id;
     @Column
     private String name;
     @Column
-    private String link;
+    private String surname;
+    @Column
+    private String patronymic;
+    @Column
+    private String email;
+    @Column
+    private String password;
+    @Column
+    private String subject;
 }

@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,23 +7,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("assessments")
+
+@Table("tasks")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Assessment {
+public class Task {
     @Id
     private Integer id;
     @Column
-    private Integer student_id;
-    @Column
-    private Integer lesson_id;
-    @Column
     private String content;
     @Column
-    private Boolean checked;
+    private String subject;
     @Column
     private Boolean test_type;
-    @Column
-    private Integer course_id;
 }

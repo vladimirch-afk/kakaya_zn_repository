@@ -1,4 +1,4 @@
-package com.example.demo.data.model;
+package com.example.demo.data.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,22 +7,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("admins")
+@Table("files")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Admin {
+public class File {
     @Id
     private Integer id;
     @Column
     private String name;
     @Column
-    private String surname;
-    @Column
-    private String patronymic;
-    @Column
-    private String email;
-    @Column
-    private String password;
+    private String link;
 }
-

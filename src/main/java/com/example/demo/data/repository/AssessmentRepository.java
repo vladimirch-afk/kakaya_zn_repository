@@ -1,6 +1,6 @@
 package com.example.demo.data.repository;
 
-import com.example.demo.data.model.Assessment;
+import com.example.demo.data.model.entities.Assessment;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 
